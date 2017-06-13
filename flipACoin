@@ -1,0 +1,28 @@
+#flipping a coin
+
+import random #needed to generate random number in range we specify
+import time #needed for time.sleep
+
+userFlips = 0 #holds the amount of flips the user wants
+actualFlips = 0 #counter
+
+print("This program will flip a coin for you.")
+
+print("\nHow many times do you want to flip the coin?")
+userFlips = int(input())
+
+print(" ")
+
+while actualFlips in range(userFlips):
+
+    if random.randrange(2) == 1:
+        print("Heads")
+        time.sleep(1) #slows down the time between flips b/c the computer can do 100s of flips instantly
+    else:
+        print("Tails")
+        time.sleep(1)
+
+    actualFlips += 1 #increments actualFlips, if not used creates an infinite loop
+
+    
+print("\nThanks for using my program!")
